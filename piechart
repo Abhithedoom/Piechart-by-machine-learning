@@ -1,0 +1,13 @@
+import matplotlib.pyplot as plt     ####importing matplotlib as a library####
+import numpy as np                  ####importing numpy library####
+plt.style.use('ggplot')           
+name='Abhihsek', 'Aman', 'Jay', 'Neha'
+salary=[1000000,120000,3000000,5000000]
+explode=(0.1,0.1,0.1,0.1)           ####for excluding the data from other data####
+pie_color=("blue", "green", "red", "orange")
+fig, ax =plt.subplots()
+ax.pie(salary, colors=pie_color, labels=name, autopct='%1.1f%%', startangle=90,explode=explode)
+inner_circle=plt.Circle((0,0),0.80,fc='green',alpha=0.1)
+ax.axis('equal')                              ###for axix###
+plt.tight_layout()
+plt.show()
